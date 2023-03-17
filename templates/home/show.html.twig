@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ driverForView.name }}{% endblock %}
+
+{% block body %}
+    {#% dump(driverForView) %#}
+    <div class="container bg-lighttt pt-5">
+
+        <div class="row mb-2">
+
+            <div class="col">
+
+                <div
+                    class="row g-0 borderrr rrrounded overflow-hidden flex-md-row align-items-start mb-4 shadow-smmm position-relative">
+                    <div class="col-4 driver__poster img-thumbnail"
+                        style="background-image: url({{ driverForView.poster }});">
+                        <img src="{{ asset('images/poster-placeholder.png') }}" class="img-fluid">
+                    </div>
+
+                    <div class="col-8 p-4 d-flex flex-column position-static bg-light">
+                        
+                        <h3 class="mb-1">{{ driverForView.name }} (id : {{ driverForView.id }})</h3>
+                        <p>{{ driverForView.description }}
+                        </p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
